@@ -1,0 +1,100 @@
+html, body{
+    margin: 0px;
+    height: 100%;
+}
+#drag{
+    background-color: aqua;
+}
+
+#non-drop {
+    background-color: orange;
+}
+
+#drop {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 10px;
+    background-color: yellow;
+    padding: 10px;
+}
+
+#contentBar {
+    outline: 5px solid black;
+    width: 20vh;
+    height: 100vh;
+    float: right;
+}
+
+.newContent {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+
+.draggable {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    background-color: green;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideBarBtn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 50px;
+}
+
+#menuBtn {
+    top: 50px;
+}
+
+#checkboxBtn {
+    top: 100px;
+}
+
+#dropDownBtn {
+    top: 150px;
+}
+
+#fileTypeBtn {
+    bottom: 50px;
+}
+
+.fileInput {
+    position: absolute;
+    bottom: 100px;
+    right: 25px;
+}
+
+.newElementPopup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid green;
+    margin: 50px;
+    padding: 1px;
+}
+
+.btnCancel {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}

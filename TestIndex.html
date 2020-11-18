@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>test site</title>
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="js/DragNDrop.js"></script>
+    <script type="text/javascript" src="js/Button.js"></script>
+    <script type="text/javascript" src="js/PdfImporter.js"></script>
+    <script type="text/javascript" src="js/FileTypeBtn.js"></script>
+
+</head>
+<body>
+
+    <div class="sideBar">
+        <div class="sideBar" id="contentBar">
+            <button class="sideBarBtn" id="menuBtn">New menu</button>
+            <button class="sideBarBtn" id="checkboxBtn">New checkbox </button>
+            <button class="sideBarBtn" id="dropDownBtn">New dropdown </button>
+            <button class="sideBarBtn" id="fileTypeBtn">New file box </button>
+        </div>
+    </div>
+
+    <div class="newElementPopup" id="newMenu" style="display: none">
+        <label for="menu"><b>menu</b></label>
+
+        <label for="number"><b>how many</b></label>
+
+        <button class="btn">submit</button>
+        <button class="btnCancel" id="menuCancel">close</button>
+    </div>
+
+    <div class="newElementPopup" id="newCheckbox" style="display: none">
+        <label for="checkbox"><b>checkbox</b></label>
+
+        <label for="number"><b>how many</b></label>
+
+        <button class="btn">submit</button>
+        <button class="btnCancel" id="CbCancel">close</button>
+    </div>
+
+    <div class="newElementPopup" id="newDropDown" style="display: none">
+        <label for="dropDown"><b>dropDown</b></label>
+
+        <label for="number"><b>how many</b></label>
+
+        <button class="btn">submit</button>
+        <button class="btnCancel" id="DDCancel">close</button>
+    </div>
+
+    <div class="newElementPopup" id="newFileElement" style="display: none">
+        <label for="File"><b>File</b></label>
+
+        <label for="type"><b>what file</b></label>
+
+        <input type="file" class="fileInput" id="fileInput" name="files" accept=".pdf, video/*, audio/*, image/*, .txt" style="width: 150px" onclick="newElement()">
+        <button class="btnCancel" id="FTCancel">close</button>
+    </div>
+
+    <div id="new"></div>
+
+</body>
+</html>
