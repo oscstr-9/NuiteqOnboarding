@@ -55,6 +55,8 @@ $(function newElement() {
         //});
     });
 
+//=========================================================================================\\
+
     // Close making new element and enable buttons
     $(".btnCancel").button();
 
@@ -89,7 +91,86 @@ $(function newElement() {
         state = false;
         ChangeBtnState();
     });
+    $(".btnCancel").button();
 
+//=========================================================================================\\
+
+    // Close making new element and enable buttons and spawn wanted items
+    $(".acptBtn").button();
+
+    // Menu Btn
+    $("#menuAcpt").click(function (event) {
+        document.getElementById("newMenu").style.display = "none";
+
+        state = false;
+        ChangeBtnState();
+    });
+
+    // Checkbox Btn
+    $("#CbAcpt").click(function (event) {
+        document.getElementById("newCheckbox").style.display = "none";
+
+        state = false;
+        ChangeBtnState();
+
+        if ($('input[name="listBox"]:checked').length > 0) {
+            var div = document.createElement("div");
+            for (var i = 0; i < document.getElementById("cbAmount").value; i++) {
+                //Add content here
+
+                var newContent = document.createElement("INPUT");
+                newContent.setAttribute("type", "checkbox");
+                newContent.className += "newContent";
+
+                div.appendChild(newContent);
+            }
+            div.className += "draggable";
+            const currentDiv = document.getElementById("new");
+            document.body.insertBefore(div, currentDiv);
+
+            $(function () {
+                $(".draggable").draggable({ grid: [20, 20] });
+            });
+        }
+        else {
+            for (var i = 0; i < document.getElementById("cbAmount").value; i++) {
+                //Add content here
+
+                var div = document.createElement("div");
+
+                var newContent = document.createElement("INPUT");
+                newContent.setAttribute("type", "checkbox");
+
+                newContent.className += "newContent";
+
+                div.className += "draggable";
+                div.appendChild(newContent);
+
+                const currentDiv = document.getElementById("new");
+                document.body.insertBefore(div, currentDiv);
+
+                $(function () {
+                    $(".draggable").draggable({ grid: [20, 20] });
+                });
+            }
+        }
+    });
+
+    // Drop-Down Btn
+    $("#DDAcpt").click(function (event) {
+        document.getElementById("newDropDown").style.display = "none";
+
+        state = false;
+        ChangeBtnState();
+    });
+
+    // File-Type Btn
+    $("#FTAcpt").click(function (event) {
+        document.getElementById("newFileElement").style.display = "none";
+
+        state = false;
+        ChangeBtnState();
+    });
     // Enable/Disable buttons
     function ChangeBtnState() {
         $("#menuBtn").prop('disabled', state);
