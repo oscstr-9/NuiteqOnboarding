@@ -84,6 +84,14 @@ $(function newElement() {
         ChangeBtnState();
     });
 
+    // Button Btn
+    $("#buttonCancel").click(function (event) {
+        document.getElementById("newButton").style.display = "none";
+
+        state = false;
+        ChangeBtnState();
+    });
+
     // File-Type Btn
     $("#FTCancel").click(function (event) {
         document.getElementById("newFileElement").style.display = "none";
@@ -159,6 +167,14 @@ $(function newElement() {
     // Drop-Down Btn
     $("#DDAcpt").click(function (event) {
         document.getElementById("newDropDown").style.display = "none";
+
+        state = false;
+        ChangeBtnState();
+    });
+
+    // Button Btn
+    $("#buttonCancel").click(function (event) {
+        document.getElementById("newButton").style.display = "none";
 
         state = false;
         ChangeBtnState();

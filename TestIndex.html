@@ -28,11 +28,12 @@
     </div>
 
     <div class="newElementPopup" id="newMenu" style="display: none">
-        <label for="menu"><b>menu</b></label>
-
-        <label for="number"><b>how many</b></label>
-
-        <button class="btn">submit</button>
+        <text Menu></text>
+        <text id="amount" Amount></text>
+        <input type="number" id="menuAmount" />
+        <text id="CbList" Amount></text>
+        <input type="checkbox" name="listBox" />
+        <button class="acptBtn" id="menuAcpt">Done</button>
         <button class="btnCancel" id="menuCancel">close</button>
     </div>
 
@@ -41,17 +42,29 @@
         <text id="amount" Amount></text>
         <input type="number" id="cbAmount" />
         <text id="CbList" Amount></text>
-        <input type="checkbox" name="listBox"/>
+        <input type="checkbox" name="listBox" />
         <button class="acptBtn" id="CbAcpt">Done</button>
         <button class="btnCancel" id="CbCancel">close</button>
     </div>
 
     <div class="newElementPopup" id="newDropDown" style="display: none">
-        <label for="dropDown"><b>dropDown</b></label>
+        <text Drop-down></text>
+        <text id="amount" Amount></text>
+        <input type="number" id="cbAmount" />
+        <text id="CbList" Amount></text>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+            </div>
+        </div>
+        <button class="acptBtn" id="DDAcpt">Done</button>
+        <button class="btnCancel" id="DDCancel">close</button>
+    </div>
 
-        <label for="number"><b>how many</b></label>
-
-        <button class="btn">submit</button>
+    <div class="newElementPopup" id="newButton" style="display: none">
+        <text Drop-down></text>
+        <text id="amount" Amount></text>
+        <button class="acptBtn" id="DDAcpt">Done</button>
         <button class="btnCancel" id="DDCancel">close</button>
     </div>
 
