@@ -3,13 +3,9 @@ html, body{
     height: 100%;
 }
 
-#contentBar {
-    outline: 5px solid black;
-    width: 20vh;
-    height: 100vh;
-    float: right;
-}
 
+
+/*Newly created element*/
 .newContent {
     width: 100px;
     height: 100px;
@@ -29,6 +25,16 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+/*Content bar buttons*/
+#contentBar {
+    outline: 5px solid black;
+    width: 20vh;
+    height: 100vh;
+    float: right;
 }
 
 .sideBarBtn {
@@ -58,31 +64,41 @@ html, body{
     bottom: 50px;
 }
 
-.fileInput {
-    position: absolute;
-    bottom: 100px;
-    right: 25px;
-}
 
+
+/*New element window*/
 .newElementPopup {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 5px solid green;
-    margin: 50px;
-    padding: 1px;
+    border: 2px solid black;
+    width: 20vw;
+    height: 10vh;
+    margin: 100px;
+    padding: 20px;
 }
 
 .btnCancel {
-    /*background-color: #555;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
     position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;*/
+    top: 80%;
+    right: 5%;
+}
+
+.acptBtn {
+    position: fixed;
+    top: 80%;
+    right: 20%;
+}
+
+.title{
+    font-size:medium;
+    color: black;
+}
+
+/*Mew element window content*/
+.fileInput {
+    position: absolute;
+    bottom: 100px;
+    right: 25px;
 }
