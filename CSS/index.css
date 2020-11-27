@@ -50,6 +50,10 @@ html, body{
     top: 150px;
 }
 
+#buttonBtn {
+    top: 200px;
+}
+
 #fileTypeBtn {
     bottom: 50px;
 }

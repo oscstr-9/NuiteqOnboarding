@@ -4,6 +4,7 @@
     <title>test site</title>
     <link rel="stylesheet" href="CSS/index.css">
 
+    <!--Included scripts-->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"></script>
@@ -17,16 +18,18 @@
 
 </head>
 <body>
-
+    <!--All buttons for adding content to the HMTL canvas-->
     <div class="sideBar">
         <div class="sideBar" id="contentBar">
             <button class="sideBarBtn" id="menuBtn">New menu</button>
             <button class="sideBarBtn" id="checkboxBtn">New checkbox </button>
             <button class="sideBarBtn" id="dropDownBtn">New dropdown </button>
+            <button class="sideBarBtn" id="buttonBtn">New button </button>
             <button class="sideBarBtn" id="fileTypeBtn">New file box </button>
         </div>
     </div>
 
+    <!--Menu for addding new menues to the HTML canvas-->
     <div class="newElementPopup" id="newMenu" style="display: none">
         <text Menu></text>
         <text id="amount" Amount></text>
@@ -37,6 +40,7 @@
         <button class="btnCancel" id="menuCancel">close</button>
     </div>
 
+    <!--Menu for addding new checkboxes and checklists to the HTML canvas-->
     <div class="newElementPopup" id="newCheckbox" style="display: none">
         <text CheckBox></text>
         <text id="amount" Amount></text>
@@ -47,6 +51,7 @@
         <button class="btnCancel" id="CbCancel">close</button>
     </div>
 
+    <!--Menu for addding new dropdown menues to the HTML canvas-->
     <div class="newElementPopup" id="newDropDown" style="display: none">
         <text Drop-down></text>
         <text id="amount" Amount></text>
@@ -61,13 +66,16 @@
         <button class="btnCancel" id="DDCancel">close</button>
     </div>
 
+    <!--Menu for addding new buttons to the HTML canvas-->
     <div class="newElementPopup" id="newButton" style="display: none">
         <text Drop-down></text>
         <text id="amount" Amount></text>
-        <button class="acptBtn" id="DDAcpt">Done</button>
-        <button class="btnCancel" id="DDCancel">close</button>
+        <input type="text" id="buttonText"/>
+        <button class="acptBtn" id="buttonAcpt">Done</button>
+        <button class="btnCancel" id="buttonCancel">close</button>
     </div>
 
+    <!--Menu for addding new file elements to the HTML canvas-->
     <div class="newElementPopup" id="newFileElement" style="display: none">
         <label for="File"><b>File</b></label>
 

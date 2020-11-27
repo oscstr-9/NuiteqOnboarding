@@ -1,4 +1,11 @@
-﻿var state = true;
+﻿/*
+ The Button.js script handles button inputs 
+ from the sidebar aswell as the button inputs for
+ adding new elements to the html canvas.
+ 
+ */
+
+var state = true;
 
 $(function newElement() {
     // Open window for new elements
@@ -26,6 +33,15 @@ $(function newElement() {
     $("#dropDownBtn").click(function (event) {
         //Button content
         document.getElementById("newDropDown").style.display = "block";
+
+        state = true;
+        ChangeBtnState();
+    });
+
+    // Button Btn
+    $("#buttonBtn").click(function (event) {
+        //Button content
+        document.getElementById("newButton").style.display = "block";
 
         state = true;
         ChangeBtnState();
@@ -173,11 +189,28 @@ $(function newElement() {
     });
 
     // Button Btn
-    $("#buttonCancel").click(function (event) {
+    $("#buttonAcpt").click(function (event) {
         document.getElementById("newButton").style.display = "none";
 
         state = false;
         ChangeBtnState();
+
+        var div = document.createElement("div");
+
+        var newContent = document.createElement("button");
+        newContent.setAttribute("value", document.getElement("buttonText"));
+
+        newContent.className += "newContent";
+
+        div.className += "draggable";
+        div.appendChild(newContent);
+
+        const currentDiv = document.getElementById("new");
+        document.body.insertBefore(div, currentDiv);
+
+        $(function () {
+            $(".draggable").draggable({ grid: [20, 20] });
+        });
     });
 
     // File-Type Btn
@@ -192,6 +225,7 @@ $(function newElement() {
         $("#menuBtn").prop('disabled', state);
         $("#checkboxBtn").prop('disabled', state);
         $("#dropDownBtn").prop('disabled', state);
+        $("#buttonBtn").prop('disabled', state);
         $("#fileTypeBtn").prop('disabled', state);
     }
 });
