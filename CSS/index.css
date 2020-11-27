@@ -69,8 +69,8 @@ html, body{
 /*New element window*/
 .newElementPopup {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 40vw;
+    top: 40vh;
     transform: translate(-50%, -50%);
     border: 2px solid black;
     width: 20vw;
@@ -92,13 +92,24 @@ html, body{
 }
 
 .title{
-    font-size:medium;
-    color: black;
+margin-top:auto;
 }
 
-/*Mew element window content*/
+/*New element window content*/
 .fileInput {
     position: absolute;
     bottom: 100px;
     right: 25px;
+}
+
+#cbAmount{
+    position:fixed;
+    left:25%;
+    top: 38%;
+}
+
+#listBox{
+    position:fixed;
+    left:25%;
+    bottom:28%;
 }
