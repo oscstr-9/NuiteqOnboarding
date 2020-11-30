@@ -20,7 +20,7 @@ html, body{
     float: left;
     margin: 10px;
     padding: 10px;
-    background-color: green;
+    background-color: aqua;
 
     display: flex;
     align-items: center;
@@ -60,7 +60,7 @@ html, body{
     top: 200px;
 }
 
-#fileTypeBtn {
+#googleDocsBtn {
     bottom: 50px;
 }
 

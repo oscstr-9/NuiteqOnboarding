@@ -6,6 +6,8 @@
  */
 
 var state = true;
+var i = 0;
+
 
 $(function newElement() {
     // Open window for new elements
@@ -48,10 +50,10 @@ $(function newElement() {
     });
 
     // File-Type Btn
-    $("#fileTypeBtn").click(function (event) {
+    $("#googleDocsBtn").click(function (event) {
         //Button content
 
-        document.getElementById("newFileElement").style.display = "block";
+        document.getElementById("newGoogleDocsElement").style.display = "block";
 
         state = true;
         ChangeBtnState();
@@ -109,8 +111,8 @@ $(function newElement() {
     });
 
     // File-Type Btn
-    $("#FTCancel").click(function (event) {
-        document.getElementById("newFileElement").style.display = "none";
+    $("#gdCancel").click(function (event) {
+        document.getElementById("newGoogleDocsElement").style.display = "none";
 
         state = false;
         ChangeBtnState();
@@ -214,18 +216,41 @@ $(function newElement() {
     });
 
     // File-Type Btn
-    $("#FTAcpt").click(function (event) {
-        document.getElementById("newFileElement").style.display = "none";
+    $("#gdAcpt").click(function (event) {
+        document.getElementById("newGoogleDocsElement").style.display = "none";
 
         state = false;
         ChangeBtnState();
+        var div = document.createElement("div");
+
+        var img = document.createElement("img");
+        img.src = "Images/excelPng.png"
+
+       // img.id += i;
+        img.className += "newContent";
+
+       //// $("#" + i).wrap("<a href='" + document.createElement("gdBtnLink").value+"'></a>");
+       // $("#" + i).wrap("<a href='" + document.createElement("gdBtnLink").value+"'></a>");
+
+
+        div.className += "draggable";
+        div.appendChild(img);
+
+        const currentDiv = document.getElementById("new");
+        document.body.insertBefore(div, currentDiv);
+
+        i += 1;
+        $(function () {
+            $(".draggable").draggable({ grid: [20, 20] });
+        });
     });
+
     // Enable/Disable buttons
     function ChangeBtnState() {
         $("#menuBtn").prop('disabled', state);
         $("#checkboxBtn").prop('disabled', state);
         $("#dropDownBtn").prop('disabled', state);
         $("#buttonBtn").prop('disabled', state);
-        $("#fileTypeBtn").prop('disabled', state);
+        $("#googleDocsBtn").prop('disabled', state);
     }
 });
