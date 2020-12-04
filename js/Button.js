@@ -226,12 +226,9 @@ $(function newElement() {
         var img = document.createElement("img");
         img.src = "Images/excelPng.png"
 
-       // img.id += i;
         img.className += "newContent";
 
-       //// $("#" + i).wrap("<a href='" + document.createElement("gdBtnLink").value+"'></a>");
-       // $("#" + i).wrap("<a href='" + document.createElement("gdBtnLink").value+"'></a>");
-
+        div.setAttribute("href", "https://www.youtube.com/");
 
         div.className += "draggable";
         div.appendChild(img);
@@ -239,7 +236,6 @@ $(function newElement() {
         const currentDiv = document.getElementById("new");
         document.body.insertBefore(div, currentDiv);
 
-        i += 1;
         $(function () {
             $(".draggable").draggable({ grid: [20, 20] });
         });
@@ -247,10 +243,9 @@ $(function newElement() {
 
     // Enable/Disable buttons
     function ChangeBtnState() {
-        $("#menuBtn").prop('disabled', state);
-        $("#checkboxBtn").prop('disabled', state);
-        $("#dropDownBtn").prop('disabled', state);
-        $("#buttonBtn").prop('disabled', state);
-        $("#googleDocsBtn").prop('disabled', state);
+        if(state == true)
+            document.getElementById("newElementDim").style.display = "block";
+        else
+            document.getElementById("newElementDim").style.display = "none";
     }
 });
