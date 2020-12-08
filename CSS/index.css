@@ -4,7 +4,6 @@ html, body{
 }
 
 
-
 /*Newly created element*/
 .newContent {
     width: 100px;
@@ -20,7 +19,7 @@ html, body{
     float: left;
     margin: 10px;
     padding: 10px;
-    background-color: green;
+    background-color: aqua;
 
     display: flex;
     align-items: center;
@@ -60,7 +59,7 @@ html, body{
     top: 200px;
 }
 
-#fileTypeBtn {
+#googleDocsBtn {
     bottom: 50px;
 }
 
@@ -77,6 +76,19 @@ html, body{
     height: 10vh;
     margin: 100px;
     padding: 20px;
+    z-index:2;
+    background-color:white;
+}
+
+#newElementDim {
+    position:fixed;
+    background-color: dimgray;
+    opacity:0.35;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .btnCancel {

@@ -25,7 +25,7 @@
             <button class="sideBarBtn" id="checkboxBtn">New checkbox </button>
             <button class="sideBarBtn" id="dropDownBtn">New dropdown </button>
             <button class="sideBarBtn" id="buttonBtn">New button </button>
-            <button class="sideBarBtn" id="fileTypeBtn">New file box </button>
+            <button class="sideBarBtn" id="googleDocsBtn">New file box </button>
         </div>
     </div>
 
@@ -82,14 +82,16 @@
     </div>
 
     <!--Menu for addding new file elements to the HTML canvas-->
-    <div class="newElementPopup" id="newFileElement" style="display: none">
-        <label for="File"><b>File</b></label>
+    <div class="newElementPopup" id="newGoogleDocsElement" style="display: none">
+        <p class="title"><b>Google Docs</b></p>
 
-        <label for="type"><b>what file</b></label>
+        <input type="text" name="gdBtnLink" value="Google Docs link" />
 
-        <input type="file" class="fileInput" id="fileInput" name="files" accept=".pdf, video/*, audio/*, image/*, .txt" style="width: 150px" onclick="newElement()">
-        <button class="btnCancel" id="FTCancel">close</button>
+        <button class="acptBtn" id="gdAcpt">Done</button>
+        <button class="btnCancel" id="gdCancel">close</button>
     </div>
+
+    <div id="newElementDim" style="display: none"></div>
 
     <div id="new"></div>
 
