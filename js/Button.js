@@ -50,27 +50,13 @@ $(function newElement() {
     });
 
     // File-Type Btn
-    $("#googleDocsBtn").click(function (event) {
+    $("#linkBtn").click(function (event) {
         //Button content
 
-        document.getElementById("newGoogleDocsElement").style.display = "block";
+        document.getElementById("newLinkElement").style.display = "block";
 
         state = true;
         ChangeBtnState();
-
-        //var div = document.createElement("div");
-        //var newContent = document.createElement("button");
-        //newContent.className += "newContent";
-
-        //div.className += "draggable";
-        //div.appendChild(newContent);
-
-        //const currentDiv = document.getElementById("new");
-        //document.body.insertBefore(div, currentDiv);
-
-        //$(function () {
-        //    $(".draggable").draggable({ grid: [20, 20] });
-        //});
     });
 
 //=========================================================================================\\
@@ -111,8 +97,8 @@ $(function newElement() {
     });
 
     // File-Type Btn
-    $("#gdCancel").click(function (event) {
-        document.getElementById("newGoogleDocsElement").style.display = "none";
+    $("#linkCancel").click(function (event) {
+        document.getElementById("newLinkElement").style.display = "none";
 
         state = false;
         ChangeBtnState();
@@ -147,6 +133,7 @@ $(function newElement() {
                 var newContent = document.createElement("INPUT");
                 newContent.setAttribute("type", "checkbox");
                 newContent.className += "newContent";
+                newContent.className += "checkList";
 
                 div.appendChild(newContent);
             }
@@ -200,7 +187,9 @@ $(function newElement() {
         var div = document.createElement("div");
 
         var newContent = document.createElement("button");
-        newContent.setAttribute("value", document.getElement("buttonText"));
+        newContent.textContent = document.getElementById("btnText").value;
+
+        newContent.onclick = document.getElementById("buttonLink").value;
 
         newContent.className += "newContent";
 
@@ -216,29 +205,37 @@ $(function newElement() {
     });
 
     // File-Type Btn
-    $("#gdAcpt").click(function (event) {
-        document.getElementById("newGoogleDocsElement").style.display = "none";
+    $("#linkAcpt").click(function (event) {
+        if (document.getElementById("btnLink").value == "Enter link here!") {
+            alert("Enter a link");
+        }
+        else {
+            document.getElementById("newLinkElement").style.display = "none";
 
-        state = false;
-        ChangeBtnState();
-        var div = document.createElement("div");
+            state = false;
+            ChangeBtnState();
+            var div = document.createElement("div");
 
-        var img = document.createElement("img");
-        img.src = "Images/excelPng.png"
+            var a = document.createElement("a");
+            a.href = document.getElementById("btnLink").value;
 
-        img.className += "newContent";
+            var img = document.createElement("img");
+            img.src = "Images/linkImage.png"
 
-        div.setAttribute("href", "https://www.youtube.com/");
+            img.className += "newContent";
 
-        div.className += "draggable";
-        div.appendChild(img);
+            div.className += "draggable";
+            a.appendChild(img);
+            div.appendChild(a);
 
-        const currentDiv = document.getElementById("new");
-        document.body.insertBefore(div, currentDiv);
+            const currentDiv = document.getElementById("new");
+            document.body.insertBefore(div, currentDiv);
 
-        $(function () {
-            $(".draggable").draggable({ grid: [20, 20] });
-        });
+            $(function () {
+                $(".draggable").draggable({ grid: [20, 20] });
+            });
+        }
+        document.getElementById("btnLink").value = "Enter link here!";
     });
 
     // Enable/Disable buttons

@@ -25,11 +25,12 @@
             <button class="sideBarBtn" id="checkboxBtn">New checkbox </button>
             <button class="sideBarBtn" id="dropDownBtn">New dropdown </button>
             <button class="sideBarBtn" id="buttonBtn">New button </button>
-            <button class="sideBarBtn" id="googleDocsBtn">New file box </button>
+            <button class="sideBarBtn" id="linkBtn">New image link </button>
         </div>
     </div>
 
     <!--Menu for addding new menues to the HTML canvas-->
+    <!-- Currently work in progress -->
     <div class="newElementPopup" id="newMenu" style="display: none">
         <p class="title"><b>Menu</b></p>
         <p id="amount" Amount></p>
@@ -41,6 +42,7 @@
     </div>
 
     <!--Menu for addding new checkboxes and checklists to the HTML canvas-->
+    <!-- Requires some css fine tuning -->
     <div class="newElementPopup" id="newCheckbox" style="display: none">
         <p class="title"><b>CheckBox</b></p>
 
@@ -49,12 +51,13 @@
 
         <p>List</p>
         <input type="checkbox" id="listBox" name="listBox" />
-                
+
         <button class="acptBtn" id="CbAcpt">Done</button>
         <button class="btnCancel" id="CbCancel">close</button>
     </div>
 
     <!--Menu for addding new dropdown menues to the HTML canvas-->
+    <!-- Work sort of done, needs to be implemented from other file -->
     <div class="newElementPopup" id="newDropDown" style="display: none">
         <p class="title"><b>Drop-down</b></p>
         <p id="amount" Amount></p>
@@ -70,29 +73,32 @@
     </div>
 
     <!--Menu for addding new buttons to the HTML canvas-->
+    <!-- Currently work in progress -->
     <div class="newElementPopup" id="newButton" style="display: none">
         <p class="title"><b>Button</b></p>
 
-        <input type="text" name="btnText" value="Button text" />
+        <input type="text" id="btnText" value="Button text" />
 
-        <input type="text" name="btnLink" value="Button link" />
+        <input type="text" id="buttonLink" value="Button link" />
 
         <button class="acptBtn" id="buttonAcpt">Done</button>
         <button class="btnCancel" id="buttonCancel">close</button>
     </div>
 
-    <!--Menu for addding new file elements to the HTML canvas-->
-    <div class="newElementPopup" id="newGoogleDocsElement" style="display: none">
-        <p class="title"><b>Google Docs</b></p>
+    <!--Menu for addding new Link elements to the HTML canvas-->
+    <div class="newElementPopup" id="newLinkElement" style="display: none">
+        <p class="title"><b>Link element</b></p>
 
-        <input type="text" name="gdBtnLink" value="Google Docs link" />
+        <input type="text" id="btnLink" value="Enter link here!" />
 
-        <button class="acptBtn" id="gdAcpt">Done</button>
-        <button class="btnCancel" id="gdCancel">close</button>
+        <button class="acptBtn" id="linkAcpt">Done</button>
+        <button class="btnCancel" id="linkCancel">close</button>
     </div>
 
+    <!-- Background dim -->
     <div id="newElementDim" style="display: none"></div>
 
+    <!-- Place all new elements go -->
     <div id="new"></div>
 
 </body>

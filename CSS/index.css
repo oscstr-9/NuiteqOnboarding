@@ -1,3 +1,10 @@
+/*
+    The css file for most things on the website.
+    The items are somewhat sorted by use and place of operation
+    with some category titles.
+
+*/
+
 html, body{
     margin: 0px;
     height: 100%;
@@ -19,7 +26,7 @@ html, body{
     float: left;
     margin: 10px;
     padding: 10px;
-    background-color: aqua;
+    border: 1px solid black;
 
     display: flex;
     align-items: center;
@@ -59,8 +66,8 @@ html, body{
     top: 200px;
 }
 
-#googleDocsBtn {
-    bottom: 50px;
+#linkBtn {
+    top: 250px;
 }
 
 
@@ -118,6 +125,17 @@ margin-top:auto;
     position:fixed;
     left:25%;
     top: 38%;
+}
+
+.checkList {
+    /*position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;*/
 }
 
 #listBox{
