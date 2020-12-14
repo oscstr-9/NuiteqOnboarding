@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+
+<script type="text/javascript" src="JavaScript.js"></script>
+<script type="text/javascript" src="Youtube.js"></script>
+<script type="text/javascript" src="videojs-ei8.min"></script>
+<script type="text/javascript" src="video.js"></script>
+
+<link rel="stylesheet" href="vid.css" /> 
+<link rel="stylesheet" href="video-js" />
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>video upload</title>
+</head>
+
+<div id="instructions">
+  <video id="vid1" class="video-js vjs-default-skin vjs-fluid" controls width="640" height="264"></video>
+
+  <h2>Load Video:</h2>
+  <form id="vsg-loadvideo">
+    Video URL:
+    <br>
+    <input type="text" name="vidurl" id="vsg-vurl" style="width:450px" value="https://www.youtube.com/watch?v=psGDf2VrvK8" placeholder="Enter Youtube URL">
+    <br>
+    <br>
+    <input type="submit" value="Load video">
+  </form>
+ </div>
+
