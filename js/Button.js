@@ -245,14 +245,7 @@ $(function newElement() {
             });
         }
         document.getElementById("btnLink").value = "Enter link here!";
-
-
-    });
-
-
-    $("#backgroundAcpt").click(function (event) {
-        state = false;
-        ChangeBtnState();
+        document.getElementById("btnLinkImg").value = "Enter link here!";
     });
 
     // Enable/Disable buttons
