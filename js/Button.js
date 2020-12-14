@@ -220,7 +220,7 @@ $(function newElement() {
             a.href = document.getElementById("btnLink").value;
 
             var img = document.createElement("img");
-            img.src = "Images/linkImage.png"
+            img.src = document.getElementById("btnLinkImg").value;
 
             img.className += "newContent";
 
