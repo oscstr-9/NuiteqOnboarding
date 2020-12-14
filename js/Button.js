@@ -236,6 +236,7 @@ $(function newElement() {
             });
         }
         document.getElementById("btnLink").value = "Enter link here!";
+        document.getElementById("btnLinkImg").value = "Enter link here!";
     });
 
     // Enable/Disable buttons
