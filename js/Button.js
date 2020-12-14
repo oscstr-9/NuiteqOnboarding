@@ -59,6 +59,15 @@ $(function newElement() {
         ChangeBtnState();
     });
 
+    $("#btnBackground").click(function (event) {
+        //Button content
+
+        document.getElementById("newLinkElement").style.display = "block";
+
+        state = true;
+        ChangeBtnState();
+    });
+
 //=========================================================================================\\
 
     // Close making new element and enable buttons
@@ -236,6 +245,14 @@ $(function newElement() {
             });
         }
         document.getElementById("btnLink").value = "Enter link here!";
+
+
+    });
+
+
+    $("#backgroundAcpt").click(function (event) {
+        state = false;
+        ChangeBtnState();
     });
 
     // Enable/Disable buttons
